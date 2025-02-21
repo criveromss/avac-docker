@@ -4,7 +4,7 @@ services:
     php:
         build:
             context: .
-            dockerfile: ./docker/php/Dockerfile
+            dockerfile: docker/php/Dockerfile
         restart: unless-stopped
         working_dir: /var/www/html
         environment:
@@ -12,7 +12,7 @@ services:
             APP_SECRET: ${APP_SECRET:-ChangeMe}
             DATABASE_URL: ${DATABASE_URL}
         expose:
-            - "9000"  # PHP-FPM pour Nginx en local & Traefik en prod
+            - "9000"
         labels:
             - "traefik.enable=true"
             - "traefik.http.routers.${PROJECT_NAME:-symfony}.rule=Host(`${DOMAIN_NAME}`)"
@@ -20,19 +20,19 @@ services:
             - "traefik.http.routers.${PROJECT_NAME:-symfony}.tls.certresolver=letsencrypt"
             - "traefik.http.services.${PROJECT_NAME:-symfony}.loadbalancer.server.port=9000"
     
-   
+    
     nginx:
         build:
             context: ./nginx
             dockerfile: Dockerfile
-        volumes:
-            - ./avac-docker:/var/www/html
         restart: unless-stopped
-        depends_on:
-            - php
         ports:
             - "8092:80"
-    
+        volumes:
+            - ./:/var/www/html
+        links:
+            - php
+            
     database:
         image: postgres:15-alpine
         restart: unless-stopped
