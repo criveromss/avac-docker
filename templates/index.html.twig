@@ -1,0 +1,301 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+{% include "_partials/header.html.twig" %}
+  <section>
+    <div class="position-relative herosection">
+      <img src="{{ asset('images/hero.png') }}" alt="" class="w-100" />
+      <div
+        class="position-absolute top-0 start-0 w-100 text-center h-100 d-flex justify-content-center align-items-center flex-column">
+        <h1>Louez ou achetez <span class="rotating-text">Bienvenue</br> au club</span></br> une voiture mythique</h1>
+        <p>Plongez dans l’univers des voitures de légende et accédez à une collection <br> exclusive de modèles iconiques, un patrimoine rare et authentique.</p>
+        <div class="d-flex justify-content-center gap-md-4 gap-2 flex-column flex-md-row">
+          <a  href="{{ path('app_collection') }}" class="blacky-button fill">Voir la collection</a>
+          <a class="club" href="{{ path('app_qui-sommes-nous') }}">Découvrir le club</a>
+        </div>
+      </div>
+      <div class="position-absolute heroicon d-flex flex-column gap-2">
+        <a class="noborder" href="#"><img src="{{ asset('images/insta.svg')}}" alt="" /></a>
+        <a class="noborder" href="#"><img src="{{ asset('images/linked.svg')}}" alt="" /></a>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="w-100 vihcule">
+      <div class="vihcale">
+        <h3>Rechercher un véhicule</h3>
+        <div class="input-container">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18.707" height="18.708" viewBox="0 0 18.707 18.708">
+            <path id="Tracé_1783" data-name="Tracé 1783" d="M10,18a7.951,7.951,0,0,0,4.9-1.687l4.4,4.395,1.414-1.414-4.4-4.4A7.99,7.99,0,1,0,10,18ZM10,4a6,6,0,1,1-6,6A6.006,6.006,0,0,1,10,4Z" transform="translate(-2 -2)" fill="#1e1e21"/>
+          </svg>
+          <input type="search" placeholder="Porsche 911, Jaguar type E…" />
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="py-10 models">
+    <div class="container">
+      <h3>Achat & location</h3>
+      <h2>Nos derniers modèles</h2>
+      <div class="row gap-3 gap-md-0">
+          {% for article in cars %}
+              <div class="col-lg-4 col-md-6 position-relative" data-aos="fade-up">
+                  <a href="{{ path('app_voiture', { slug: article.slug }) }}">
+                  <div class="tagdiv position-absolute start-0">Nouveauté</div>
+                      <div id="carousel-{{ article.id }}" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                          <div class="carousel-indicators">
+                              {% for image in article.images %}
+                                  <button type="button" data-bs-target="#carousel-{{ article.id }}" data-bs-slide-to="{{ loop.index0 }}"
+                                          class="{% if loop.first %}active{% endif %}" aria-label="Slide {{ loop.index }}"></button>
+                              {% endfor %}
+                          </div>
+                          <div class="carousel-inner">
+                              {% for image in article.images %}
+                                  <div class="carousel-item {% if loop.first %}active{% endif %}" data-bs-interval="5000">
+                                      <img src="{{ image }}" class="d-block w-100" alt="Image {{ loop.index }}">
+                                  </div>
+                              {% endfor %}
+                          </div>
+                      </div>
+                      <h4>{{ article.title }}</h4>
+                      <p>{{ article.year }} • {{ article.ch }} • {{ article.kilometers }}</p>
+                  </a>
+              </div>
+          {% endfor %}
+
+
+        <div class="col-lg-4 col-md-6 position-relative">
+          <div class="innersec d-flex justify-content-center align-items-center flex-column">
+            <h6>+</h6>
+            <h5>Votre coup de coeur</br> est peut-être ailleurs</h5>
+            <a class="blacky-button" href="{{ path('app_collection') }}">Voir toute la collection</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="py-10 pt-0 forboxes" data-aos="fade-up" data-aos-delay="0">
+    <div class="container pb-5">
+      <div class="row gap-4 gap-lg-0">
+        <div class="col-md-7" data-aos="fade-right" data-aos-delay="200">
+          <a href="#" class="d-block position-relative">
+            <div class="position-relative">
+              <img src="{{ asset('images/img1.png')}}" alt="" class="w-100 h-300" />
+              <a href="{{ path('app_pro') }}">
+                <div class="w-100 h-100 position-absolute top-0 start-0 d-flex justify-content-end align-items-end">
+                  <div class="w-100 mt-auto p-4 bgoverlay">
+                    <h3>Événements pros</h3>
+                    <img src="{{ asset('images/arrow3.svg')}}" alt="Flèche" />
+                  </div>
+                </div>
+              </a>
+            </div>
+          </a>
+          <div class="row mt-4 gap-4 gap-md-0">
+            <div class="col-md-6" data-aos="fade-left" data-aos-delay="200">
+              <a href="#" class="d-block position-relative">
+                <div class="position-relative">
+                  <img src="{{ asset('images/img3.png')}}" alt="" class="w-100 h-300" />
+                  <a href="{{ path('app_recherche') }}">
+                  <div class="w-100 h-100 position-absolute top-0 start-0 d-flex justify-content-end align-items-end">
+                    <div class="w-100 mt-auto p-4 bgoverlay">
+                      <h3>Recherche personnalisée</h3>
+                      <img src="{{ asset('images/arrow3.svg')}}" alt="Flèche" />
+                    </div>
+                  </div>
+                  </a>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-6" data-aos="fade-left" data-aos-delay="200">
+              <a href="#" class="d-block position-relative">
+                <div class="position-relative">
+                  <img src="{{ asset('images/img4.png')}}" alt="" class="w-100 h-300" />
+                  <a href="{{ path('app_shooting') }}">
+                  <div class="w-100 h-100 position-absolute top-0 start-0 d-flex justify-content-end align-items-end">
+                    <div class="w-100 mt-auto p-4 bgoverlay">
+                      <h3>Shootings photo & tournages</h3>
+                      <img src="{{ asset('images/arrow3.svg')}}" alt="Flèche" />
+                    </div>
+                  </div>
+                  </a>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-5" data-aos="fade-left" data-aos-delay="200">
+          <a href="#" class="d-block position-relative">
+            <div class="position-relative">
+              <img src="{{ asset('images/img2.png')}}" alt="" class="w-100 h-630" />
+              <a href="{{ path('app_depot') }}">
+              <div class="w-100 h-100 position-absolute top-0 start-0 d-flex justify-content-end align-items-end">
+                <div class="w-100 mt-auto p-4 bgoverlay">
+                  <h3>Dépôt-vente</h3>
+                  <img src="{{ asset('images/arrow3.svg')}}" alt="Flèche" />
+                </div>
+              </div>
+              </a>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-10 servarea">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <img src="{{ asset('images/img5.png')}}" alt="" class="w-100 h-630" />
+        </div>
+        <div class="col-md-6">
+          <div class="w-100 ps-lg-5 pt-5 pt-lg-0 h-100 d-flex justify-content-center flex-column text-start">
+            <h4>Notre adn</h4>
+            <h3>Amicalement Vôtre, c’est quoi ?</h3>
+            <p>Amicalement Vôtre, c’est l’hommage d’une génération aux voitures de légende. C’est un club exclusif dédié à la célébration d’un héritage automobile rare et authentique. </p>
+            <p>Entrez dans un univers où chaque voiture a une âme et raconte une histoire, où chaque trajet devient une immersion dans une époque mythique.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Conteneur du logo -->
+    <div class="logo-container"></div>
+
+    <div class="servnew">
+      <svg data-aos="fade-right" data-aos-duration="3000" class="toparrow position-absolute"  width="854" height="242" viewBox="0 0 854 242" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+                id="line-path"
+                d="M-105.205 173.839C-80.065 152.163 -54.734 131.235 -25.752 115.422C47.102 75.2013 132.816 64.4583 214.929 70.0313C338.588 78.1783 457.589 118.315 581.23 128.408C645.451 133.456 780.231 135.227 815.001 71.4743C825.95 51.4913 819.785 25.9363 797.482 17.8193C779.254 10.9793 758.148 18.0123 744.289 30.9883C715.289 57.6933 715.41 102.476 737.884 133.534C753.166 155.762 776.177 171.879 797.19 189.404C813.094 202.437 828.214 216.367 843.112 230.511"
+                stroke="#DB5C1D"
+                stroke-width="30"
+        />
+      </svg>
+      <div class="container">
+        <div class="heading">
+          Le club des passionnés de voitures mythiques, là où le passé rencontre le présent !
+        </div>
+      </div>
+      <svg data-aos="fade-left" data-aos-duration="3000" class="bttomarrow position-absolute" width="868" height="217" viewBox="0 0 868 217" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+                id="line-path-2"
+                d="M11.408 9.89502C49.98 55.073 89.041 100.956 137.763 135.511C195.135 176.082 267.272 198.781 337.495 201.535C371.895 202.387 405.047 194.549 436.666 180.379C481.571 160.181 524.094 133.148 571.452 118.551C709.914 74.174 858.036 117.88 994.051 153.9C1079.32 174.701 1171.35 202.58 1257.9 174.834C1269.21 171.336 1280.36 167.261 1291.48 163.179"
+                stroke="#DB5C1D"
+                stroke-width="30"
+        />
+      </svg>
+
+
+    </div>
+  </section>
+
+  <section class="px-3 daksec overflowx">
+    <div class="clubsec" >
+      <div class="container">
+        <div class="row norotate">
+          <div class="col-md-6 pe-4">
+            <h4>La communauté</h4>
+            <h3>Devenez membre du club</h3>
+            <p>Rejoignez une communauté exclusive où chaque voiture légendaire raconte une histoire et chaque trajet devient une émotion inoubliable. Amicalement Vôtre, c’est l’authenticité et le partage au coeur de votre passion.</p>
+            <a class="orange-button-hover" href="{{ path('app_qui-sommes-nous') }}">Découvrir le club</a>
+            <div class="pe-5">
+              <hr />
+              <div class="d-flex justify-content-between">
+                      <div data-aos="fade-up">
+                          <h5 class="counter" data-target="420">0</h5>
+                          <h6>Membres</h6>
+                      </div>
+                      <div data-aos="fade-up">
+                          <h5 class="counter" data-target="12">0</h5>
+                          <h6>Voitures en location</h6>
+                      </div>
+                      <div data-aos="fade-up">
+                          <h5 class="counter" data-target="100">0</h5>
+                          <h6>Taux de satisfaction</h6>
+                      </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <img src="{{ asset('images/img6.png')}}" class="w-100" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="logosec">
+    <div class="logo-slider">
+      <div class="logo-track">
+        <img src="{{ asset('images/Porsche Black.svg')}}" alt="Porsche" />
+        <img src="{{ asset('images/Lotus Cars New Black.svg')}}" alt="Lotus" />
+        <img src="{{ asset('images/Ford_Script.svg')}}" alt="Ford" />
+        <img src="{{ asset('images/Peugeot 2021 Years.svg')}}" alt="Peugeot" />
+        <img src="{{ asset('images/Jaguar.svg')}}" alt="Jaguar" />
+        <img src="{{ asset('images/Volvo New Black.svg')}}" alt="Volvo" />
+        <img src="{{ asset('images/Triumph Wordmark.svg')}}" alt="Triumph" />
+        <img src="{{ asset('images/Renault New Black.svg')}}" alt="Renault" />
+        <img src="{{ asset('images/Bentley Motors.svg')}}" alt="Bentley" />
+        <!-- Duplication des logos pour l'effet continu -->
+        <img src="{{ asset('images/Porsche Black.svg')}}" alt="Porsche" />
+        <img src="{{ asset('images/Lotus Cars New Black.svg')}}" alt="Lotus" />
+        <img src="{{ asset('images/Ford_Script.svg')}}" alt="Ford" />
+        <img src="{{ asset('images/Peugeot 2021 Years.svg')}}" alt="Peugeot" />
+        <img src="{{ asset('images/Jaguar.svg')}}" alt="Jaguar" />
+        <img src="{{ asset('images/Volvo New Black.svg')}}" alt="Volvo" />
+        <img src="{{ asset('images/Triumph Wordmark.svg')}}" alt="Triumph" />
+        <img src="{{ asset('images/Renault New Black.svg')}}" alt="Renault" />
+        <img src="{{ asset('images/Bentley Motors.svg')}}" alt="Bentley" />
+      </div>
+    </div>
+  </section>
+  <section class="slidersec">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 mb-5 mb-lg-0">
+          <div class="h-100 d-flex justify-content-center flex-column">
+            <h4>Amicalement Vôtre</h4>
+            <h3>C'est aussi des expériences inoubliables !</h3>
+            <p>On partage tout sur nos réseaux :</p>
+            <ul class="d-flex gap-3 p-0 m-0">
+              <li><a href="#"><img src="{{ asset('images/insta.svg')}}" alt="" /></a></li>
+              <li><a href="#"><img src="{{ asset('images/linked.svg')}}" alt="" /></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="videoslider slider">
+            <div>
+              <video width="100%">
+                <source src="video/video.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div>
+              <video width="100%">
+                <source src="video/video1.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div>
+              <video width="100%">
+                <source src="video/video2.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div>
+              <video width="100%">
+                <source src="video/video2.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div>
+              <video width="100%">
+                <source src="video/video1.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+ {% include "_partials/footer.html.twig" %}
+{% endblock %}

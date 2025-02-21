@@ -1,0 +1,49 @@
+<header class="hdr w-100 bg-white">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+
+            <a class="navbar-brand d-block d-lg-none" href="{{ path('app_index') }}">
+                <img class="img-logo" src="{{ asset('images/logo.svg') }}" alt="" /></a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
+                    aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarTogglerDemo03">
+                <ul class="navbar-nav w-350">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ path('app_collection') }}">La collection</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">Nos services </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{{ path('app_pro') }}" class="dropdown-item">Évenement pros</a></li>
+                            <li><a href="{{ path('app_shooting') }}" class="dropdown-item">Shootings</a></li>
+                            <li><a href="{{ path('app_recherche') }}" class="dropdown-item">Recherche personnalisée</a></li>
+                            <li><a href="{{ path('app_depot') }}" class="dropdown-item">Dépôt vente</a></li>
+
+                        </ul>
+                    </li>
+
+
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">La communauté </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{{ path('app_qui-sommes-nous') }}" class="dropdown-item">Qui-sommes-nous</a></li>
+                            <li><a href="{{ path('app_adhesion') }}" class="dropdown-item">Adhésion</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+                <a class="navbar-brand mx-0 pt-3 d-none d-lg-block" href="{{ path('app_index') }}"><img class="mt-5" src="{{ asset('images/logo.svg') }}"
+                                                                                           alt="" /></a>
+                <div class="d-flex flexcust w-350 gap-4 align-items-center justify-content-end">
+                    <a href="{{ path('app_contact') }}"> <button class="club">Contact</button></a>
+                    <button class="club d-flex justify-content-center align-items-center gap-2"><img src="{{ asset('images/user.svg') }}" alt="" />
+                        Connexion</button>
+                    <a href=""><img src="{{ asset('images/flag.svg') }}" alt="" /></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>

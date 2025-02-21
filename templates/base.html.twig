@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Amicalement :: Home</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
+        <link rel='stylesheet' href='{{ asset('css/lightslider.css') }}'>
+
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/slick.css') }}" />
+
+
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
+        {% block stylesheets %}
+        {% endblock %}
+
+        {% block javascripts %}
+        {% endblock %}
+    </head>
+    <body>
+        {% block body %}{% endblock %}
+
+        <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
+        <script src="{{ asset('js/jquery-2.2.0.min.js') }}" type="text/javascript"></script>
+
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+        <script type="text/javascript" src="{{ asset('js/slick.min.js') }}"></script>
+        <script type="text/javascript">
+            $(document).on('ready', function () {
+                $('.videoslider').slick({
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    autoplay: true,
+                    autoplaySpeed: 2000,
+                    centerPadding: '30px 0',
+                    arrows: false,
+                    centerMode: true,
+                    responsive: [
+                        {
+                            breakpoint: 991,
+                            settings: {
+                                slidesToShow: 1,
+                                slidesToScroll: 1,
+                                centerPadding: '0px',
+                            }
+                        },
+                        {
+                            breakpoint: 767,
+                            settings: {
+                                slidesToShow: 1,
+                                slidesToScroll: 1,
+                                centerPadding: '0px',
+                            }
+                        }
+                    ]
+                });
+                window.addEventListener("load", function() {
+                    document.querySelector(".rotating-text").classList.add("start-animation");
+                });
+            });
+
+        </script>
+        <script>
+            //sticky Header
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 1){
+                    $('header').addClass("sticky");
+                }
+                else{
+                    $('header').removeClass("sticky");
+                }
+            });
+        </script>
+
+        <script>
+            AOS.init({
+                duration: 1000, // Durée de l'animation en millisecondes
+                easing: 'ease', // Type d'interpolation
+                once: false, // Animation jouée une seule fois
+            });
+        </script>
+        <script>
+
+            document.addEventListener('DOMContentLoaded', () => {
+                // Liste des éléments à observer
+                const paths = [
+                    { id: '#line-path', activeClass: 'line-path-active' },
+                    { id: '#line-path-2', activeClass: 'line-path-2-active' }
+                ];
+
+                // Crée un observateur pour gérer les animations
+                const observer = new IntersectionObserver(
+                    (entries) => {
+                        entries.forEach((entry) => {
+                            if (entry.isIntersecting) {
+                                entry.target.classList.add(entry.target.dataset.activeClass);
+                                observer.unobserve(entry.target); // Stoppe l'observation après activation
+                            }
+                        });
+                    },
+                    { threshold: 0.5 } // L'élément doit être à moitié visible pour activer l'animation
+                );
+
+                // Ajoute les chemins à l'observateur
+                paths.forEach((path) => {
+                    const element = document.querySelector(path.id);
+                    element.dataset.activeClass = path.activeClass; // Associe la classe active
+                    observer.observe(element); // Ajoute l'élément à l'observateur
+                });
+            });
+
+        </script>
+        <script>
+            $(document).ready(function () {
+                $('.testimonial-slider').slick({
+                    infinite: true,
+                    slidesToShow: 3,           // Affiche 3 éléments sur desktop
+                    slidesToScroll: 1,
+                    autoplay: true,
+                    autoplaySpeed: 2000,
+                    speed: 600,
+                    arrows: false,
+                    dots: false,
+                    pauseOnHover: false,
+                    cssEase: 'linear',
+                    responsive: [
+                        {
+                            breakpoint: 1024,    // Pour tablettes
+                            settings: {
+                                slidesToShow: 2  // Affiche 2 éléments
+                            }
+                        },
+                        {
+                            breakpoint: 768,     // Pour mobile
+                            settings: {
+                                slidesToShow: 1  // Affiche 1 élément
+                            }
+                        }
+                    ]
+                });
+            });
+        </script>
+    <script>
+        $(document).ready(function () {
+            function animateCounter(counter) {
+                const target = parseInt(counter.getAttribute('data-target'));
+                let current = 0;
+                const duration = 3000;  // Durée totale de l'animation en millisecondes (ajuste selon ton besoin)
+                const increment = target / (duration / 16);  // 16ms correspond au taux de rafraîchissement (60fps)
+
+
+                function updateCounter() {
+                    current += increment;
+                    if (current >= target) {
+                        counter.innerText = target;
+                    } else {
+                        counter.innerText = Math.floor(current);
+                        requestAnimationFrame(updateCounter);
+                    }
+                }
+
+                updateCounter();
+            }
+
+            function startCounters() {
+                $('.counter').each(function () {
+                    if ($(this).is(':visible')) {
+                        animateCounter(this);
+                    }
+                });
+            }
+
+            // Activer l'animation quand les compteurs deviennent visibles
+            $(window).on('scroll', function () {
+                startCounters();
+            });
+
+            // Lancer une première fois pour s'assurer que les compteurs visibles sont animés
+            startCounters();
+        });
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+    </body>
+</html>

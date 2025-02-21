@@ -1,0 +1,224 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+    {% include "_partials/header.html.twig" %}
+  <section>
+    <div class="heroDiv d-flex justify-content-center align-items-center flex-column text-center">
+      <div class="container">
+        <h4>La collection</h4>
+        <h1>Tous nos véhicules disponibles à <br> l’achat ou la location</h1>
+      </div>
+    </div>
+  </section>
+  <section class="pb-3">
+    <div class="container pb-4 pt-4 newpage d-flex justify-content-between align-items-end">
+      <div class="vihcale mt-0 pb-0">
+        <h3>Rechercher un véhicule</h3>
+        <div class="input-container">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18.707" height="18.708" viewBox="0 0 18.707 18.708">
+            <path id="Tracé_1783" data-name="Tracé 1783" d="M10,18a7.951,7.951,0,0,0,4.9-1.687l4.4,4.395,1.414-1.414-4.4-4.4A7.99,7.99,0,1,0,10,18ZM10,4a6,6,0,1,1-6,6A6.006,6.006,0,0,1,10,4Z" transform="translate(-2 -2)" fill="#1e1e21"/>
+          </svg>
+          <input type="search" placeholder="Porsche 911, Jaguar type E…" />
+        </div>
+      </div>
+      <div class="d-flex justify-content-between gap-md-4 gap-3">
+        <button>Trier par</button>
+        <button>Location</button>
+        <button>Marque <img src="{{ asset('images/icon1.png')}}" alt="" /></button>
+      </div>
+    </div>
+  </section>
+  <section class="pb-10 models" data-aos="fade-up"  data-aos-delay="300">
+    <div class="container-fluid collec">
+      <div class="row">
+
+              {% for article in cars %}
+                  <div class="col-lg-3 col-md-6 position-relative mb-4">
+                      <a href="{{ path('app_voiture', { slug: article.slug }) }}">
+                          <div class="tagdiv position-absolute start-0">Nouveauté</div>
+                          <div id="carousel-{{ article.id }}" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                              <div class="carousel-indicators">
+                                  {% for image in article.images %}
+                                      <button type="button" data-bs-target="#carousel-{{ article.id }}" data-bs-slide-to="{{ loop.index0 }}"
+                                              class="{% if loop.first %}active{% endif %}" aria-label="Slide {{ loop.index }}"></button>
+                                  {% endfor %}
+                              </div>
+                              <div class="carousel-inner">
+                                  {% for image in article.images %}
+                                      <div class="carousel-item {% if loop.first %}active{% endif %}" data-bs-interval="5000">
+                                          <img src="{{ image }}" class="d-block w-100" alt="Image {{ loop.index }}">
+                                      </div>
+                                  {% endfor %}
+                              </div>
+                          </div>
+                          <h4>{{ article.title }}</h4>
+                          <p>{{ article.year }} • {{ article.ch }} • {{ article.kilometers }}</p>
+                      </a>
+                  </div>
+              {% endfor %}
+
+
+
+
+
+
+          <div class="col-lg-6 col-md-12 position-relative mb-4">
+          <div class="innersec d-flex justify-content-center px-5 align-items-start flex-column">
+            <h6>+</h6>
+            <h4>Pas encore de coup de coeur ?</h4>
+            <p>Dites-nous quel modèle vous recherchez, nous le trouverons pour vous.</p>
+            <a class="a-outline club" href="{{ path('app_recherche') }}">Recherche personnalisée</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+<section class="bg-color-vente px-3 mb-4" data-aos="fade-right"  data-aos-delay="500">
+  <div class="depot-vente-img d-flex justify-content-center align-items-left flex-column text-left">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6 pe-4">
+          <div class="depot-content">
+            <h4>Dépôt-vente</h4>
+            <h3>Confiez-nous votre véhicule</h3>
+            <p>
+              Vous possédez une voiture d’exception et souhaitez la vendre dans les meilleures conditions ? Amicalement Vôtre met son expertise et son réseau de passionnés au service de votre véhicule.
+            </p>
+
+              <ul class="advantages-list mb-5">
+                <li data-aos="fade-left" data-aos-delay="500">
+              <span class="icon">
+               <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="26.366" height="26.366" viewBox="0 0 26.366 26.366">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_875" data-name="Rectangle 875" width="26.366" height="26.366" transform="translate(0 0)" fill="none" stroke="#db5c1d" stroke-width="1.2"/>
+    </clipPath>
+  </defs>
+  <g id="Groupe_2752" data-name="Groupe 2752" transform="translate(-399.707 -860.817)">
+    <g id="Groupe_2484" data-name="Groupe 2484" transform="translate(399.707 860.817)">
+      <g id="Groupe_2483" data-name="Groupe 2483" clip-path="url(#clip-path)">
+        <path id="Tracé_1918" data-name="Tracé 1918" d="M25.866,13.183c0,1.584-2.239,2.712-2.81,4.089-.592,1.428.171,3.8-.905,4.879s-3.451.313-4.879.905c-1.377.571-2.5,2.81-4.089,2.81s-2.711-2.239-4.089-2.81c-1.428-.592-3.8.171-4.879-.905S3.9,18.7,3.31,17.272C2.739,15.894.5,14.767.5,13.183s2.239-2.712,2.81-4.089c.592-1.428-.171-3.8.905-4.879S7.666,3.9,9.094,3.31C10.472,2.739,11.6.5,13.183.5S15.9,2.739,17.272,3.31c1.428.592,3.8-.171,4.879.905s.313,3.451.905,4.879C23.627,10.472,25.866,11.6,25.866,13.183Z" fill="none" stroke="#db5c1d" stroke-width="1.2"/>
+      </g>
+    </g>
+    <path id="Tracé_2082" data-name="Tracé 2082" d="M5.358,8.936l3.935,4.892,5.665-6.657" transform="translate(403 863.165)" fill="none" stroke="#db5c1d" stroke-width="1.2"/>
+  </g>
+</svg>
+
+              </span>
+                  Visibilité exclusive auprès de notre communauté
+                </li>
+                <li data-aos="fade-left" data-aos-delay="600">
+              <span class="icon">
+               <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="26.366" height="26.366" viewBox="0 0 26.366 26.366">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_875" data-name="Rectangle 875" width="26.366" height="26.366" transform="translate(0 0)" fill="none" stroke="#db5c1d" stroke-width="1.2"/>
+    </clipPath>
+  </defs>
+  <g id="Groupe_2752" data-name="Groupe 2752" transform="translate(-399.707 -860.817)">
+    <g id="Groupe_2484" data-name="Groupe 2484" transform="translate(399.707 860.817)">
+      <g id="Groupe_2483" data-name="Groupe 2483" clip-path="url(#clip-path)">
+        <path id="Tracé_1918" data-name="Tracé 1918" d="M25.866,13.183c0,1.584-2.239,2.712-2.81,4.089-.592,1.428.171,3.8-.905,4.879s-3.451.313-4.879.905c-1.377.571-2.5,2.81-4.089,2.81s-2.711-2.239-4.089-2.81c-1.428-.592-3.8.171-4.879-.905S3.9,18.7,3.31,17.272C2.739,15.894.5,14.767.5,13.183s2.239-2.712,2.81-4.089c.592-1.428-.171-3.8.905-4.879S7.666,3.9,9.094,3.31C10.472,2.739,11.6.5,13.183.5S15.9,2.739,17.272,3.31c1.428.592,3.8-.171,4.879.905s.313,3.451.905,4.879C23.627,10.472,25.866,11.6,25.866,13.183Z" fill="none" stroke="#db5c1d" stroke-width="1.2"/>
+      </g>
+    </g>
+    <path id="Tracé_2082" data-name="Tracé 2082" d="M5.358,8.936l3.935,4.892,5.665-6.657" transform="translate(403 863.165)" fill="none" stroke="#db5c1d" stroke-width="1.2"/>
+  </g>
+</svg>
+
+              </span>
+                  Valorisation optimale grâce à notre équipe de connaisseurs passionnés
+                </li>
+                <li data-aos="fade-left" data-aos-delay="700">
+              <span class="icon">
+               <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="26.366" height="26.366" viewBox="0 0 26.366 26.366">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_875" data-name="Rectangle 875" width="26.366" height="26.366" transform="translate(0 0)" fill="none" stroke="#db5c1d" stroke-width="1.2"/>
+    </clipPath>
+  </defs>
+  <g id="Groupe_2752" data-name="Groupe 2752" transform="translate(-399.707 -860.817)">
+    <g id="Groupe_2484" data-name="Groupe 2484" transform="translate(399.707 860.817)">
+      <g id="Groupe_2483" data-name="Groupe 2483" clip-path="url(#clip-path)">
+        <path id="Tracé_1918" data-name="Tracé 1918" d="M25.866,13.183c0,1.584-2.239,2.712-2.81,4.089-.592,1.428.171,3.8-.905,4.879s-3.451.313-4.879.905c-1.377.571-2.5,2.81-4.089,2.81s-2.711-2.239-4.089-2.81c-1.428-.592-3.8.171-4.879-.905S3.9,18.7,3.31,17.272C2.739,15.894.5,14.767.5,13.183s2.239-2.712,2.81-4.089c.592-1.428-.171-3.8.905-4.879S7.666,3.9,9.094,3.31C10.472,2.739,11.6.5,13.183.5S15.9,2.739,17.272,3.31c1.428.592,3.8-.171,4.879.905s.313,3.451.905,4.879C23.627,10.472,25.866,11.6,25.866,13.183Z" fill="none" stroke="#db5c1d" stroke-width="1.2"/>
+      </g>
+    </g>
+    <path id="Tracé_2082" data-name="Tracé 2082" d="M5.358,8.936l3.935,4.892,5.665-6.657" transform="translate(403 863.165)" fill="none" stroke="#db5c1d" stroke-width="1.2"/>
+  </g>
+</svg>
+
+              </span>
+                  Accompagnement personnalisé et respectueux de votre véhicule
+                </li>
+
+              </ul>
+
+
+            <a class="black-button" href="{{ path('app_pro') }}">
+              Réserver un véhicule pour un événement
+            </a>
+            <p class="advantages-text mt-3">
+              Votre voiture est entre de bonnes mains !
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="Groupe-img d-flex justify-content-center align-items-center flex-column text-center">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12 pe-4">
+          <img class="groupe" src="{{ asset('images/Groupe.png')}}">
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+  <section class="px-3 daksec overflowx" data-aos="fade-left"  data-aos-delay="300">
+    <div class="clubsec">
+      <div class="container">
+        <div class="row norotate">
+          <div class="col-md-6 pe-4">
+            <h4>La communauté</h4>
+            <h3>Devenez membre du club</h3>
+            <p>Rejoignez une communauté exclusive où chaque voiture légendaire raconte une histoire et chaque trajet devient une émotion inoubliable. Amicalement Vôtre, c’est l’authenticité et le partage au coeur de votre passion.</p>
+            <a class="orange-button-hover" href="{{ path('app_qui-sommes-nous') }}">Découvrir le club</a>
+            <div class="pe-5">
+              <hr />
+              <div class="d-flex justify-content-between">
+                  <div data-aos="fade-up">
+                      <h5 class="counter" data-target="420">0</h5>
+                      <h6>Membres</h6>
+                  </div>
+                  <div data-aos="fade-up">
+                      <h5 class="counter" data-target="12">0</h5>
+                      <h6>Voitures en location</h6>
+                  </div>
+                  <div data-aos="fade-up">
+                      <h5 class="counter" data-target="100">0</h5>
+                      <h6>Taux de satisfaction</h6>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <img src="images/img6.png" class="w-100" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <div class="mt-xxl-5">
+
+  </div>
+
+  {% include "_partials/footer.html.twig" %}
+{% endblock %}

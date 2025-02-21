@@ -1,0 +1,93 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+{% include "_partials/header.html.twig" %}
+<section>
+  <div class="heroDiv d-flex justify-content-center align-items-center flex-column text-center innersec">
+    <div class="container">
+      <h4>Louer une voiture ancienne pour un shooting photo</h4>
+      <h1>
+        Ajoutez une touche légendaire  <br> à vos projets créatifs
+      </h1>
+
+      <p class="txt text-center mt-5">
+        Que ce soit un shooting photo, une publicité, un clip vidéo ou une <br> production cinématographique, nos voitures mythiques apportent <br> une dimension unique à vos réalisations
+      </p>
+
+      <div class="d-flex justify-content-center mt-xl-5">
+        <a class="blacky-button">Réserver un véhicule pour un événement</a>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="split-section mt-xl-5">
+  <div class="photo-container">
+    <img src="{{ asset('images/car-contac.png')}}">
+  </div>
+</section>
+
+
+<section class="split-section two container py-5">
+  <div class="row align-items-center">
+    <!-- Image en haut occupant la moitié -->
+    <div class="col-lg-6 col-md-12 mb-4" data-aos="fade-left" data-aos-delay="400">
+      <img height="932" width="100%" src="{{ asset('images/photo-avac-shooting-photo.png')}}" alt="Voiture vue de face" >
+    </div>
+
+    <!-- Texte à droite (ou en-dessous sur mobile) -->
+    <div class="col-lg-6 col-md-12 col-img-down" data-aos="fade-right" data-aos-delay="500">
+      <div class="content" data-aos="fade-left" data-aos-delay="300">
+        <span class="h3 d-block mb-3">Location de voiture shooting</span>
+        <h2 class="h2 mb-4">Voitures d’exception pour <br> projets d’exception</h2>
+        <p class="txt mb-3">
+          Confiez à Amicalement Vôtre vos ambitions pour vos événements d’entreprise, séminaires ou lancements de produits. Nous mettons à votre disposition des voitures iconiques pour sublimer vos projets et créer un impact mémorable.
+        </p>
+        <p class="txt">
+          Offrez à vos collaborateurs, clients ou partenaires une expérience unique, élégante et prestigieuse.
+        </p>
+      </div>
+
+      <div class="col-img-down">
+        <img height="444" width="100%" src="{{ asset('images/photo-avac-shooting-photo2.png')}}" alt="Voiture de collection" >
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="community-section innersec">
+  <div class="container text-center">
+    <h2 class="h2 mb-4">
+      La touche d’élégance qui va sublimer <br> vos tournages et shootings
+    </h2>
+    <div class="d-flex justify-content-center">
+      <a class="blacky-button" href="{{ path('app_collection') }}" >
+        Réserver un véhicule pour un événement
+      </a>
+    </div>
+  </div>
+
+  <!-- Éléments blancs absolus -->
+  <div class="absolute-box left-box">
+    <img src="{{ asset('images/Flux%201%20Groupe%202794.svg')}}" alt="Icone Conseil" class="icon">
+    <p class="absolute-text">Conseil sur le choix du véhicule</p>
+  </div>
+  <div class="absolute-box right-box">
+    <img src="{{ asset('images/Flux%201%20Groupe%202794.svg')}}" alt="Icone Transport" class="icon">
+    <p class="absolute-text">Transport VIP</p>
+  </div>
+  <div class="absolute-box bottom-box">
+    <img src="{{ asset('images/Flux%201%20Groupe%202794.svg')}}" alt="Icone Assistance" class="icon">
+    <p class="absolute-text">Assistance personnalisée</p>
+  </div>
+</section>
+
+
+
+    {% include "_partials/footer.html.twig" %}
+{% endblock %}

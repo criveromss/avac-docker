@@ -1,0 +1,139 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+{% include "_partials/header.html.twig" %}
+
+  <section>
+    <div class="heroDiv d-flex justify-content-center align-items-center flex-column text-center">
+      <div class="container">
+        <h4>Dépot-Vente</h4>
+        <h1>Confiez-nous votre voiture et  <br>laissez-nous prendre soin de tout</h1>
+
+        <p class="txt text-center mt-5">
+          Vous souhaitez vendre votre voiture ? Grâce à notre service de <br> dépôt-vente, nous vous accompagnons à chaque étape.
+        </p>
+      </div>
+    </div>
+
+    <div class="d-flex justify-content-center">
+      <img src="{{ asset('images/arrow3.svg')}}" alt="Flèche" class="arrow-down">
+
+    </div>
+  </section>
+
+
+<section class="page-container bg-white cards-section" style="height: 100%">
+    <div class="custom-form-wrapper">
+      <form class="custom-form servnous">
+        <div class="custom-form-radio-group">
+          <label class="custom-form-radio-label">
+            <input class="custom-form-radio" type="radio" name="action" value="louer">
+            Je veux louer mon véhicule
+          </label>
+          <label class="custom-form-radio-label">
+            <input class="custom-form-radio" type="radio" name="action" value="vendre">
+            Je veux vendre mon véhicule
+          </label>
+        </div>
+
+        <div class="custom-form-field">
+          <label class="custom-form-label" for="marque">La marque</label>
+          <input class="custom-form-input" type="text" id="marque" placeholder="Porsche">
+        </div>
+        <div class="custom-form-row">
+          <div class="custom-form-field">
+            <label class="custom-form-label" for="modele">Le modèle</label>
+            <input class="custom-form-input" type="text" id="modele" placeholder="911 turbo" >
+          </div>
+          <div class="custom-form-field">
+            <label class="custom-form-label" for="annee">L'année</label>
+            <input class="custom-form-input" type="text" id="annee" placeholder="1963">
+          </div>
+        </div>
+        <div class="custom-form-field">
+          <button type="button" class="custom-form-upload-button">📤 Télécharger des photos</button>
+        </div>
+        <div class="custom-form-row">
+          <div class="custom-form-field">
+            <label class="custom-form-label" for="nom">Nom</label>
+            <input class="custom-form-input" type="text" id="nom" placeholder="Votre nom de famille">
+          </div>
+          <div class="custom-form-field">
+            <label class="custom-form-label" for="prenom">Prénom</label>
+            <input class="custom-form-input" type="text" id="prenom" placeholder="Votre prénom">
+          </div>
+        </div>
+        <div class="custom-form-row">
+          <div class="custom-form-field">
+            <label class="custom-form-label" for="email">Email</label>
+            <input class="custom-form-input" type="email" id="email" placeholder="contact@exemple.com">
+          </div>
+          <div class="custom-form-field">
+            <label class="custom-form-label" for="telephone">Téléphone</label>
+            <input class="custom-form-input" type="tel" id="telephone" placeholder="+336 81 00 00 00">
+          </div>
+        </div>
+        <div class="custom-form-field">
+          <label class="custom-form-label" for="adresse">Adresse</label>
+          <input class="custom-form-input" type="text" id="adresse" placeholder="Numéro de rue, code postal, ville">
+        </div>
+        <div class="custom-form-checkbox-group">
+          <input type="checkbox" id="accept">
+          <label for="accept">J'accepte de recevoir des communications d'Amicalement Vôtre</label>
+        </div>
+        <a type="submit" class="orange-button-hover" href="#">Envoyer ma demande</a>
+      </form>
+    </div>
+</section>
+
+
+<section class="Son-histoire bis" >
+  <div class="container mt-2 mb-3">
+    <div class="row no-gutters align-items-center justify-content-evenly">
+      <!-- Image à gauche -->
+      <div class="col-md-6" data-aos="fade-right"  data-aos-delay="300">
+        <div class="image-container" style="background-image: url('./images/photo-avac-ensemble-porsche.png'); height: 451px; max-width:642px; width: 100%">
+        </div>
+      </div>
+      <!-- Texte à droite -->
+      <div class="col-md-4" data-aos="fade-left"  data-aos-delay="300">
+        <div class="text-container">
+          <h3 class="h3">Vendre une voiture ancienne</h3>
+          <h2 class="h2">Vendez votre voiture de collection : On s’occupe de tout</h2>
+          <p class="txt">
+            Valorisation du véhicule, mise en avant auprès d’une audience qualifiée et gestion des démarches administratives.          </p>
+          <p class="txt">
+            En confiant votre voiture à Amicalement Vôtre, vous bénéficiez d’une visibilité auprès de passionnées sérieux et d’un service qui garantit sérénité et efficacité
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="cards-section">
+  <div class="cards-container">
+    <!-- Card 1 -->
+    <div class="card">
+      <div class="card-image" style="background-image: url('./images/Corner-photos-interieures.png');"></div>
+      <h3 class="card-title">Louer</h3>
+    </div>
+    <!-- Card 2 -->
+    <div class="card">
+      <div class="card-image" style="background-image: url('./images/pexels-skelm-7856851.png');"></div>
+      <h3 class="card-title">Les expériences</h3>
+      <span class="card-badge">Bientôt disponible</span>
+    </div>
+    <!-- Card 3 -->
+    <div class="card">
+      <div class="card-image" style="background-image: url('./images/WhatsApp Image 2024-11-29 at 18.53.43 (2).png');"></div>
+      <h3 class="card-title">Adhérer au Club</h3>
+
+    </div>
+  </div>
+</section>
+
+    {% include "_partials/footer.html.twig" %}
+{% endblock %}

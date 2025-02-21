@@ -1,0 +1,163 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+{% include "_partials/header.html.twig" %}
+  <section>
+    <div class="heroDiv d-flex justify-content-center align-items-center flex-column text-center">
+      <div class="container">
+        <h4>Contact</h4>
+        <h1>Une question sur le club ou les <br> services ? Contactez-nous</h1>
+      </div>
+    </div>
+  </section>
+
+
+<section>
+  <div class="contact-container">
+    <!-- Formulaire à gauche -->
+    <div class="form-box">
+      <form>
+        <label for="name">Nom</label>
+        <input id="name" type="text" placeholder="Vos nom et prénom" />
+
+        <label for="email">Email</label>
+        <input id="email" type="email" placeholder="contact@example.com" />
+
+        <label for="request">Votre demande</label>
+        <textarea id="request" placeholder="J’aimerais un renseignement…"></textarea>
+
+        <div class="checkbox-container">
+          <input id="accept" type="checkbox" />
+          <label for="accept">J’accepte de recevoir des communications d’Amicalement Vôtre</label>
+        </div>
+
+        <button type="submit">Envoyer</button>
+      </form>
+    </div>
+
+    <!-- Informations à droite -->
+    <div class="info-box">
+      <div class="contact-info">
+        <p>
+          <span class="icon">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="14.899" height="22.092" viewBox="0 0 14.899 22.092">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_949" data-name="Rectangle 949" width="14.899" height="22.092" transform="translate(0 0)" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Groupe_2782" data-name="Groupe 2782" transform="translate(0 0)">
+    <g id="Groupe_2781" data-name="Groupe 2781" clip-path="url(#clip-path)">
+      <rect id="Rectangle_948" data-name="Rectangle 948" width="13.399" height="20.592" rx="2" transform="translate(0.75 0.75)" fill="none" stroke="#d95027" stroke-width="1.5"/>
+      <path id="Tracé_2093" data-name="Tracé 2093" d="M8.517,18.389a1.068,1.068,0,1,1-1.068-1.068,1.068,1.068,0,0,1,1.068,1.068" fill="#d95027"/>
+      <line id="Ligne_61" data-name="Ligne 61" x2="3.541" transform="translate(5.679 3.495)" fill="none" stroke="#d95027" stroke-linecap="round" stroke-width="1.5"/>
+    </g>
+  </g>
+</svg>
+          </span> 02 35 XX XX XX</p>
+        <p><span class="icon">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23.072" height="26.499" viewBox="0 0 23.072 26.499">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_947" data-name="Rectangle 947" width="23.072" height="26.499" transform="translate(0 0)" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Groupe_2780" data-name="Groupe 2780" transform="translate(0 0)">
+    <g id="Groupe_2779" data-name="Groupe 2779" clip-path="url(#clip-path)">
+      <path id="Tracé_2091" data-name="Tracé 2091" d="M17.968,12.867V23.749a2,2,0,0,1-2,2H2.75a2,2,0,0,1-2-2V5.482a2,2,0,0,1,2-2H12.8" fill="none" stroke="#d95027" stroke-linecap="round" stroke-width="1.5"/>
+      <path id="Tracé_2092" data-name="Tracé 2092" d="M22.235,3.07,9.912,17.235a.354.354,0,0,1-.118.089l-2.823,1.3a.412.412,0,0,1-.557-.485l.9-2.976a.379.379,0,0,1,.071-.129L19.708.872a.388.388,0,0,1,.547-.019l1.923,1.673A.388.388,0,0,1,22.235,3.07Z" fill="none" stroke="#d95027" stroke-width="1.5"/>
+    </g>
+  </g>
+</svg>
+        </span> contact@amicalementvotre.fr</p>
+        <p><span class="icon">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21.031" height="28.288" viewBox="0 0 21.031 28.288">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_946" data-name="Rectangle 946" width="21.031" height="28.288" fill="none" stroke="#db5c1d" stroke-width="1.5"/>
+    </clipPath>
+  </defs>
+  <g id="Groupe_2778" data-name="Groupe 2778" transform="translate(0 0)">
+    <g id="Groupe_2777" data-name="Groupe 2777" transform="translate(0 0)" clip-path="url(#clip-path)">
+      <path id="Tracé_2090" data-name="Tracé 2090" d="M20.108,10.8c0,6.578-9.3,16.043-9.3,16.043S1.5,17.382,1.5,10.8a9.3,9.3,0,0,1,18.608,0Z" transform="translate(-0.288 -0.288)" fill="none" stroke="#db5c1d" stroke-width="1.5"/>
+    </g>
+  </g>
+</svg>
+        </span> 37 rue Albert Joly, 78400 Chatou</p>
+      </div>
+    </div>
+
+      <div class="image-box" data-aos="fade-right" data-aos-delay="400">
+        <img src="{{ asset('images/pexelsmatreding11213241@2x.png')}}" alt="Image de voiture" />
+      </div>
+
+  </div>
+
+
+</section>
+
+<section class="faq-section ">
+  <div class="faq-container">
+    <!-- Bloc de gauche -->
+    <div class="faq-left">
+      <h3 class="h3">faq</h3>
+      <h2 class="h2">Vous avez une question ?</h2>
+      <p class="faq-description txt">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris rhoncus ac est et congue. Aliquam in tincidunt dolor. Ut tellus eros, mattis sed aliquet quis, convallis eu est.
+      </p>
+    </div>
+    <!-- Bloc de droite -->
+    <div class="faq-right">
+      <ul class="faq-list">
+        <li class="faq-item" data-aos="fade-right" data-aos-delay="200">
+          <span class="faq-question">Ceci est un exemple de question pour la FAQ ?</span>
+          <span class="faq-arrow">↓</span>
+        </li>
+        <li class="faq-item" data-aos="fade-right" data-aos-delay="300">
+          <span class="faq-question">Ceci est un exemple de question pour la FAQ ?</span>
+          <span class="faq-arrow">↓</span>
+        </li>
+        <li class="faq-item" data-aos="fade-right" data-aos-delay="400">
+          <span class="faq-question">Ceci est un exemple de question pour la FAQ ?</span>
+          <span class="faq-arrow">↓</span>
+        </li>
+        <li class="faq-item" data-aos="fade-right" data-aos-delay="500">
+          <span class="faq-question">Ceci est un exemple de question pour la FAQ ?</span>
+          <span class="faq-arrow">↓</span>
+        </li>
+        <li class="faq-item" data-aos="fade-right" data-aos-delay="600">
+          <span class="faq-question">Ceci est un exemple de question pour la FAQ ?</span>
+          <span class="faq-arrow">↓</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+<section class="cards-section">
+  <div class="cards-container">
+    <!-- Card 1 -->
+    <div class="card">
+      <div class="card-image" style="background-image: url('./images/Corner-photos-interieures.png');"></div>
+      <h3 class="card-title">Louer</h3>
+    </div>
+    <!-- Card 2 -->
+    <div class="card">
+      <div class="card-image" style="background-image: url('./images/pexels-skelm-7856851.png');"></div>
+      <h3 class="card-title">Les expériences</h3>
+      <span class="card-badge">Bientôt disponible</span>
+    </div>
+    <!-- Card 3 -->
+    <div class="card">
+      <div class="card-image" style="background-image: url('./images/WhatsApp Image 2024-11-29 at 18.53.43 (2).png');"></div>
+      <h3 class="card-title">Adhérer au Club</h3>
+
+    </div>
+  </div>
+</section>
+
+
+    {% include "_partials/footer.html.twig" %}
+{% endblock %}

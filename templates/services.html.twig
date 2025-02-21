@@ -1,0 +1,129 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+{% include "_partials/header.html.twig" %}
+  <section>
+    <div class="heroDiv d-flex justify-content-center align-items-center flex-column text-center">
+      <div class="container">
+        <h4>Nos services</h4>
+        <h1>Des expériences uniques pour <br> vivre votre passion automobile</h1>
+      </div>
+    </div>
+  </section>
+
+<section class="py-10 pt-0 forboxes mt-xxl-5" data-aos="fade-up"  data-aos-delay="0">
+  <div class="container pb-5">
+    <div class="row gap-4 gap-lg-0 ">
+      <div class="col-md-12" data-aos="fade-left"  data-aos-delay="300">
+        <a href="#" class="d-block position-relative">
+          <div class="position-relative">
+            <img src="images/jaguar.png" alt="" class="w-100 h-300" />
+            <div class="w-100 h-100 position-absolute top-0 start-0 d-flex justify-content-end align-items-end">
+              <div class="w-100 mt-auto p-4 bgoverlay">
+                <h3>Location de voitures</h3>
+                <img src="images/arrow3.svg" alt="Flèche" />
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-7" data-aos="fade-left"  data-aos-delay="300">
+        <a href="#" class="d-block position-relative">
+          <div class="position-relative">
+            <img src="images/img1.png" alt="" class="w-100 h-300" />
+            <div class="w-100 h-100 position-absolute top-0 start-0 d-flex justify-content-end align-items-end">
+              <div class="w-100 mt-auto p-4 bgoverlay">
+                <h3>Événements pros</h3>
+                <img src="images/arrow3.svg" alt="Flèche" />
+              </div>
+            </div>
+          </div>
+        </a>
+        <div class="row mt-4 gap-4 gap-md-0">
+          <div class="col-md-6">
+            <a href="recherche-perso.html" class="d-block position-relative">
+              <div class="position-relative">
+                <img src="images/img3.png" alt="" class="w-100 h-300" />
+                <div class="w-100 h-100 position-absolute top-0 start-0 d-flex justify-content-end align-items-end">
+                  <div class="w-100 mt-auto p-4 bgoverlay">
+                    <h3>Recherche personnalisée</h3>
+                    <img src="images/arrow3.svg" alt="Flèche" />
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-6">
+            <a href="#" class="d-block position-relative">
+              <div class="position-relative">
+                <img src="images/img4.png" alt="" class="w-100 h-300" />
+                <div class="w-100 h-100 position-absolute top-0 start-0 d-flex justify-content-end align-items-end">
+                  <div class="w-100 mt-auto p-4 bgoverlay">
+                    <h3>Shootings photo & tournages</h3>
+                    <img src="images/arrow3.svg" alt="Flèche" />
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-5" data-aos="fade-right"  data-aos-delay="300">
+        <a href="depot-vente.html" class="d-block position-relative">
+          <div class="position-relative">
+            <img src="images/img2.png" alt="" class="w-100 h-630" />
+            <div class="w-100 h-100 position-absolute top-0 start-0 d-flex justify-content-end align-items-end">
+              <div class="w-100 mt-auto p-4 bgoverlay">
+                <h3>Dépôt-vente</h3>
+                <img src="images/arrow3.svg" alt="Flèche" />
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="px-3 daksec overflowx mb-5" data-aos="fade-down"  data-aos-delay="500">
+  <div class="clubsec">
+    <div class="container">
+      <div class="row norotate">
+        <div class="col-md-6 pe-4">
+          <h4>La communauté</h4>
+          <h3>Devenez membre du club</h3>
+          <p>Rejoignez une communauté exclusive où chaque voiture légendaire raconte une histoire et chaque trajet devient une émotion inoubliable. Amicalement Vôtre, c’est l’authenticité et le partage au coeur de votre passion.</p>
+          <a class="orange-button-hover" href="#">Découvrir le club</a>
+          <div class="pe-5">
+            <hr />
+            <div class="d-flex justify-content-between">
+              <div>
+                <h5>420</h5>
+                <h6>chiffre clé</h6>
+              </div>
+              <div>
+                <h5>12</h5>
+                <h6>chiffre clé</h6>
+              </div>
+              <div>
+                <h5>100%</h5>
+                <h6>chiffre clé</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <img src="images/img6.png" class="w-100" alt="" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+    {% include "_partials/footer.html.twig" %}
+{% endblock %}

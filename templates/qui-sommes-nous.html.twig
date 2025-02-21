@@ -1,0 +1,455 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+{% include "_partials/header.html.twig" %}
+  <section>
+    <div class="heroDiv d-flex justify-content-center align-items-center flex-column text-center">
+      <div class="container">
+        <h4>Qui sommes-nous</h4>
+        <h1>Amicalement Vôtre, un club de <br> passionnés avant tout</h1>
+      </div>
+    </div>
+  </section>
+
+
+<section class="Son-histoire bis" >
+  <div class="container mt-2 mb-3">
+    <div class="row no-gutters align-items-center">
+      <!-- Image à gauche -->
+      <div class="col-md-6" data-aos="fade-right"  data-aos-delay="300">
+        <div class="image-container" style="background-image: url('https://images.prismic.io/avaclub/Z6N04pbqstJ9-Qaf_CyprienDelapierre-2025-02-0503_24_14.png?auto=format,compress'); height: 538px; width: 100%">
+          <span class="image-label">Photo des 2 fondateurs</span>
+
+          <span class="badge"><img height="45" width="45" src="{{ asset('images/embleme-AVAC-noir.svg')}}"></span>
+        </div>
+      </div>
+      <!-- Texte à droite -->
+      <div class="col-md-4" data-aos="fade-left"  data-aos-delay="300">
+        <div class="text-container">
+          <h3 class="h3">Notre adn</h3>
+          <h2 class="h2">Amicalement Vôtre, c’est quoi ?</h2>
+          <p class="txt">
+              Né de la passion de deux amis, Sébastien et Vincent, pour les modèles iconiques des années 70 à 2000, Amicalement Vôtre est un club exclusif dédié à la célébration d’un héritage automobile rare et authentique. <br> <br>
+              Entrez dans un univers où chaque voiture a une âme et raconte une histoire, où chaque trajet devient une immersion dans une époque mythique.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="py-10 servnous">
+
+  <div class="servnew">
+    <svg data-aos="fade-right" data-aos-duration="3000" class="toparrow position-absolute"  width="854" height="242" viewBox="0 0 854 242" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+              id="line-path"
+              d="M-105.205 173.839C-80.065 152.163 -54.734 131.235 -25.752 115.422C47.102 75.2013 132.816 64.4583 214.929 70.0313C338.588 78.1783 457.589 118.315 581.23 128.408C645.451 133.456 780.231 135.227 815.001 71.4743C825.95 51.4913 819.785 25.9363 797.482 17.8193C779.254 10.9793 758.148 18.0123 744.289 30.9883C715.289 57.6933 715.41 102.476 737.884 133.534C753.166 155.762 776.177 171.879 797.19 189.404C813.094 202.437 828.214 216.367 843.112 230.511"
+              stroke="#DB5C1D"
+              stroke-width="30"
+      />
+    </svg>
+    <div class="container">
+      <div class="headservnous">
+        Le club des hommes & femmes passionnés de voitures mythiques des années 70 à 2000. <br>
+        <span>Partageaons notre passion dans une ambiance chic et décontractée.</span>
+      </div>
+    </div>
+    <svg data-aos="fade-left" data-aos-duration="3000" class="bttomarrow position-absolute" width="868" height="217" viewBox="0 0 868 217" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+              id="line-path-2"
+              d="M11.408 9.89502C49.98 55.073 89.041 100.956 137.763 135.511C195.135 176.082 267.272 198.781 337.495 201.535C371.895 202.387 405.047 194.549 436.666 180.379C481.571 160.181 524.094 133.148 571.452 118.551C709.914 74.174 858.036 117.88 994.051 153.9C1079.32 174.701 1171.35 202.58 1257.9 174.834C1269.21 171.336 1280.36 167.261 1291.48 163.179"
+              stroke="#DB5C1D"
+              stroke-width="30"
+      />
+    </svg>
+
+
+  </div>
+</section>
+
+<section class="community-section">
+  <div class="container">
+    <!-- Section Titre et Description -->
+    <div class="row">
+      <div class="col-md-6">
+        <h3 class="h3">La Communauté</h3>
+        <h2 class="h2">C’est aussi des expériences inoubliables !</h2>
+        <p class="txt">On partage tout sur nos réseaux :</p>
+        <div class="social-icons">
+          <img src="{{ asset('images/insta.png')}}" alt="Instagram">
+          <img src="{{ asset('images/linked.svg')}}" alt="LinkedIn">
+        </div>
+      </div>
+      <div class="col-md-6">
+        <!-- Slider -->
+        <div class="slider-container">
+          <div class="slider-track">
+            <div class="slider-item">
+              <img src="{{ asset('images/img1.png')}}" alt="Video Thumbnail">
+            </div>
+            <div class="slider-item">
+              <img src="{{ asset('images/img2.png')}}" alt="Video Thumbnail">
+            </div>
+            <div class="slider-item">
+              <img src="{{ asset('images/img3.png')}}" alt="Video Thumbnail">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Section Témoignages -->
+    <div class="row slide-test">
+        <div class="testimonial-slider">
+
+      <div class="testimonial-item" >
+        <div class="testimonial">
+          <div class="pb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15.165" height="14.462" viewBox="0 0 15.165 14.462">
+              <defs>
+                <clipPath id="clip-path">
+                  <rect id="Rectangle_873" data-name="Rectangle 873" width="15.165" height="14.462" transform="translate(0 0)" fill="#db5c1d"/>
+                </clipPath>
+              </defs>
+              <g id="Groupe_2479" data-name="Groupe 2479" transform="translate(0 0)">
+                <g id="Groupe_2478" data-name="Groupe 2478" clip-path="url(#clip-path)">
+                  <path id="Tracé_1915" data-name="Tracé 1915" d="M7.939.218l2.077,4.075a.4.4,0,0,0,.294.214l4.517.716a.4.4,0,0,1,.221.677L11.814,9.135a.4.4,0,0,0-.113.345L12.416,14a.4.4,0,0,1-.576.419L7.764,12.341a.4.4,0,0,0-.363,0L3.325,14.417A.4.4,0,0,1,2.749,14L3.464,9.48a.4.4,0,0,0-.112-.345L.118,5.9a.4.4,0,0,1,.22-.677l4.518-.716a.4.4,0,0,0,.293-.214L7.226.218a.4.4,0,0,1,.713,0" fill="#db5c1d"/>
+                </g>
+              </g>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15.165" height="14.462" viewBox="0 0 15.165 14.462">
+              <defs>
+                <clipPath id="clip-path">
+                  <rect id="Rectangle_873" data-name="Rectangle 873" width="15.165" height="14.462" transform="translate(0 0)" fill="#db5c1d"/>
+                </clipPath>
+              </defs>
+              <g id="Groupe_2479" data-name="Groupe 2479" transform="translate(0 0)">
+                <g id="Groupe_2478" data-name="Groupe 2478" clip-path="url(#clip-path)">
+                  <path id="Tracé_1915" data-name="Tracé 1915" d="M7.939.218l2.077,4.075a.4.4,0,0,0,.294.214l4.517.716a.4.4,0,0,1,.221.677L11.814,9.135a.4.4,0,0,0-.113.345L12.416,14a.4.4,0,0,1-.576.419L7.764,12.341a.4.4,0,0,0-.363,0L3.325,14.417A.4.4,0,0,1,2.749,14L3.464,9.48a.4.4,0,0,0-.112-.345L.118,5.9a.4.4,0,0,1,.22-.677l4.518-.716a.4.4,0,0,0,.293-.214L7.226.218a.4.4,0,0,1,.713,0" fill="#db5c1d"/>
+                </g>
+              </g>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15.165" height="14.462" viewBox="0 0 15.165 14.462">
+              <defs>
+                <clipPath id="clip-path">
+                  <rect id="Rectangle_873" data-name="Rectangle 873" width="15.165" height="14.462" transform="translate(0 0)" fill="#db5c1d"/>
+                </clipPath>
+              </defs>
+              <g id="Groupe_2479" data-name="Groupe 2479" transform="translate(0 0)">
+                <g id="Groupe_2478" data-name="Groupe 2478" clip-path="url(#clip-path)">
+                  <path id="Tracé_1915" data-name="Tracé 1915" d="M7.939.218l2.077,4.075a.4.4,0,0,0,.294.214l4.517.716a.4.4,0,0,1,.221.677L11.814,9.135a.4.4,0,0,0-.113.345L12.416,14a.4.4,0,0,1-.576.419L7.764,12.341a.4.4,0,0,0-.363,0L3.325,14.417A.4.4,0,0,1,2.749,14L3.464,9.48a.4.4,0,0,0-.112-.345L.118,5.9a.4.4,0,0,1,.22-.677l4.518-.716a.4.4,0,0,0,.293-.214L7.226.218a.4.4,0,0,1,.713,0" fill="#db5c1d"/>
+                </g>
+              </g>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15.165" height="14.462" viewBox="0 0 15.165 14.462">
+              <defs>
+                <clipPath id="clip-path">
+                  <rect id="Rectangle_873" data-name="Rectangle 873" width="15.165" height="14.462" transform="translate(0 0)" fill="#db5c1d"/>
+                </clipPath>
+              </defs>
+              <g id="Groupe_2479" data-name="Groupe 2479" transform="translate(0 0)">
+                <g id="Groupe_2478" data-name="Groupe 2478" clip-path="url(#clip-path)">
+                  <path id="Tracé_1915" data-name="Tracé 1915" d="M7.939.218l2.077,4.075a.4.4,0,0,0,.294.214l4.517.716a.4.4,0,0,1,.221.677L11.814,9.135a.4.4,0,0,0-.113.345L12.416,14a.4.4,0,0,1-.576.419L7.764,12.341a.4.4,0,0,0-.363,0L3.325,14.417A.4.4,0,0,1,2.749,14L3.464,9.48a.4.4,0,0,0-.112-.345L.118,5.9a.4.4,0,0,1,.22-.677l4.518-.716a.4.4,0,0,0,.293-.214L7.226.218a.4.4,0,0,1,.713,0" fill="#db5c1d"/>
+                </g>
+              </g>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15.165" height="14.462" viewBox="0 0 15.165 14.462">
+              <defs>
+                <clipPath id="clip-path">
+                  <rect id="Rectangle_873" data-name="Rectangle 873" width="15.165" height="14.462" transform="translate(0 0)" fill="#db5c1d"/>
+                </clipPath>
+              </defs>
+              <g id="Groupe_2479" data-name="Groupe 2479" transform="translate(0 0)">
+                <g id="Groupe_2478" data-name="Groupe 2478" clip-path="url(#clip-path)">
+                  <path id="Tracé_1915" data-name="Tracé 1915" d="M7.939.218l2.077,4.075a.4.4,0,0,0,.294.214l4.517.716a.4.4,0,0,1,.221.677L11.814,9.135a.4.4,0,0,0-.113.345L12.416,14a.4.4,0,0,1-.576.419L7.764,12.341a.4.4,0,0,0-.363,0L3.325,14.417A.4.4,0,0,1,2.749,14L3.464,9.48a.4.4,0,0,0-.112-.345L.118,5.9a.4.4,0,0,1,.22-.677l4.518-.716a.4.4,0,0,0,.293-.214L7.226.218a.4.4,0,0,1,.713,0" fill="#db5c1d"/>
+                </g>
+              </g>
+            </svg>
+          </div>
+          <p>
+              Voiture exceptionnelle! J’ai eu l’occasion de la louer plusieurs jours, le turbo délivre toute la puissance instantanément, la voiture est très agile mais reste facile à conduire avec la boîte auto. L’état de la voiture est irréprochable. Sébastien est un passionné, très sympathique et disponible pour vous assurer une location dans les meilleures conditions. A louer sans hésitation pour une expérience inoubliable.
+          </p>
+          <div class="author">
+            <img src="{{ asset('images/elonmusk.png')}}" alt="Elon Musk">
+            <div>
+              <h4>Eric</h4>
+              <span>PORSCHE - 911 Type 997 Turbo</span>
+            </div>
+          </div>
+          <div class="member-badge">
+            <span class="badge-icon">
+             <img src="{{ asset('images/member-icon.png')}}" alt="Icon">
+            </span>
+            &nbsp;Membre du club depuis Janvier 2025
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-item" >
+        <div class="testimonial">
+          <div class="pb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15.165" height="14.462" viewBox="0 0 15.165 14.462">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_873" data-name="Rectangle 873" width="15.165" height="14.462" transform="translate(0 0)" fill="#db5c1d"/>
+    </clipPath>
+  </defs>
+  <g id="Groupe_2479" data-name="Groupe 2479" transform="translate(0 0)">
+    <g id="Groupe_2478" data-name="Groupe 2478" clip-path="url(#clip-path)">
+      <path id="Tracé_1915" data-name="Tracé 1915" d="M7.939.218l2.077,4.075a.4.4,0,0,0,.294.214l4.517.716a.4.4,0,0,1,.221.677L11.814,9.135a.4.4,0,0,0-.113.345L12.416,14a.4.4,0,0,1-.576.419L7.764,12.341a.4.4,0,0,0-.363,0L3.325,14.417A.4.4,0,0,1,2.749,14L3.464,9.48a.4.4,0,0,0-.112-.345L.118,5.9a.4.4,0,0,1,.22-.677l4.518-.716a.4.4,0,0,0,.293-.214L7.226.218a.4.4,0,0,1,.713,0" fill="#db5c1d"/>
+    </g>
+  </g>
+</svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15.165" height="14.462" viewBox="0 0 15.165 14.462">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_873" data-name="Rectangle 873" width="15.165" height="14.462" transform="translate(0 0)" fill="#db5c1d"/>
+    </clipPath>
+  </defs>
+  <g id="Groupe_2479" data-name="Groupe 2479" transform="translate(0 0)">
+    <g id="Groupe_2478" data-name="Groupe 2478" clip-path="url(#clip-path)">
+      <path id="Tracé_1915" data-name="Tracé 1915" d="M7.939.218l2.077,4.075a.4.4,0,0,0,.294.214l4.517.716a.4.4,0,0,1,.221.677L11.814,9.135a.4.4,0,0,0-.113.345L12.416,14a.4.4,0,0,1-.576.419L7.764,12.341a.4.4,0,0,0-.363,0L3.325,14.417A.4.4,0,0,1,2.749,14L3.464,9.48a.4.4,0,0,0-.112-.345L.118,5.9a.4.4,0,0,1,.22-.677l4.518-.716a.4.4,0,0,0,.293-.214L7.226.218a.4.4,0,0,1,.713,0" fill="#db5c1d"/>
+    </g>
+  </g>
+</svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15.165" height="14.462" viewBox="0 0 15.165 14.462">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_873" data-name="Rectangle 873" width="15.165" height="14.462" transform="translate(0 0)" fill="#db5c1d"/>
+    </clipPath>
+  </defs>
+  <g id="Groupe_2479" data-name="Groupe 2479" transform="translate(0 0)">
+    <g id="Groupe_2478" data-name="Groupe 2478" clip-path="url(#clip-path)">
+      <path id="Tracé_1915" data-name="Tracé 1915" d="M7.939.218l2.077,4.075a.4.4,0,0,0,.294.214l4.517.716a.4.4,0,0,1,.221.677L11.814,9.135a.4.4,0,0,0-.113.345L12.416,14a.4.4,0,0,1-.576.419L7.764,12.341a.4.4,0,0,0-.363,0L3.325,14.417A.4.4,0,0,1,2.749,14L3.464,9.48a.4.4,0,0,0-.112-.345L.118,5.9a.4.4,0,0,1,.22-.677l4.518-.716a.4.4,0,0,0,.293-.214L7.226.218a.4.4,0,0,1,.713,0" fill="#db5c1d"/>
+    </g>
+  </g>
+</svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15.165" height="14.462" viewBox="0 0 15.165 14.462">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_873" data-name="Rectangle 873" width="15.165" height="14.462" transform="translate(0 0)" fill="#db5c1d"/>
+    </clipPath>
+  </defs>
+  <g id="Groupe_2479" data-name="Groupe 2479" transform="translate(0 0)">
+    <g id="Groupe_2478" data-name="Groupe 2478" clip-path="url(#clip-path)">
+      <path id="Tracé_1915" data-name="Tracé 1915" d="M7.939.218l2.077,4.075a.4.4,0,0,0,.294.214l4.517.716a.4.4,0,0,1,.221.677L11.814,9.135a.4.4,0,0,0-.113.345L12.416,14a.4.4,0,0,1-.576.419L7.764,12.341a.4.4,0,0,0-.363,0L3.325,14.417A.4.4,0,0,1,2.749,14L3.464,9.48a.4.4,0,0,0-.112-.345L.118,5.9a.4.4,0,0,1,.22-.677l4.518-.716a.4.4,0,0,0,.293-.214L7.226.218a.4.4,0,0,1,.713,0" fill="#db5c1d"/>
+    </g>
+  </g>
+</svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15.165" height="14.462" viewBox="0 0 15.165 14.462">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_873" data-name="Rectangle 873" width="15.165" height="14.462" transform="translate(0 0)" fill="#db5c1d"/>
+    </clipPath>
+  </defs>
+  <g id="Groupe_2479" data-name="Groupe 2479" transform="translate(0 0)">
+    <g id="Groupe_2478" data-name="Groupe 2478" clip-path="url(#clip-path)">
+      <path id="Tracé_1915" data-name="Tracé 1915" d="M7.939.218l2.077,4.075a.4.4,0,0,0,.294.214l4.517.716a.4.4,0,0,1,.221.677L11.814,9.135a.4.4,0,0,0-.113.345L12.416,14a.4.4,0,0,1-.576.419L7.764,12.341a.4.4,0,0,0-.363,0L3.325,14.417A.4.4,0,0,1,2.749,14L3.464,9.48a.4.4,0,0,0-.112-.345L.118,5.9a.4.4,0,0,1,.22-.677l4.518-.716a.4.4,0,0,0,.293-.214L7.226.218a.4.4,0,0,1,.713,0" fill="#db5c1d"/>
+    </g>
+  </g>
+</svg>
+
+          </div>
+          <p>
+              Week end magique avec la Porsche de Sebastien. La 996 gagne à être connue, c’est une vraie 911, magnifique sonorité trés typée. Sébastien est un propriétaire méticuleux qui explique bien la prise en main. Je recommande ++
+          </p>
+          <div class="author">
+            <img src="{{ asset('images/jamesbond.png')}}" alt="James Bond">
+            <div>
+              <h4>Philibert</h4>
+              <span>PORSCHE - 911 Type 996 4S</span>
+            </div>
+          </div>
+          <div class="member-badge">
+            <span class="badge-icon">
+             <img src="{{ asset('images/member-icon.png')}}" alt="Icon">
+            </span>
+             &nbsp;Membre du club depuis Janvier 2025
+          </div>
+        </div>
+      </div>
+        <div class="testimonial-item" >
+            <div class="testimonial">
+                <div class="pb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15.165" height="14.462" viewBox="0 0 15.165 14.462">
+                        <defs>
+                            <clipPath id="clip-path">
+                                <rect id="Rectangle_873" data-name="Rectangle 873" width="15.165" height="14.462" transform="translate(0 0)" fill="#db5c1d"/>
+                            </clipPath>
+                        </defs>
+                        <g id="Groupe_2479" data-name="Groupe 2479" transform="translate(0 0)">
+                            <g id="Groupe_2478" data-name="Groupe 2478" clip-path="url(#clip-path)">
+                                <path id="Tracé_1915" data-name="Tracé 1915" d="M7.939.218l2.077,4.075a.4.4,0,0,0,.294.214l4.517.716a.4.4,0,0,1,.221.677L11.814,9.135a.4.4,0,0,0-.113.345L12.416,14a.4.4,0,0,1-.576.419L7.764,12.341a.4.4,0,0,0-.363,0L3.325,14.417A.4.4,0,0,1,2.749,14L3.464,9.48a.4.4,0,0,0-.112-.345L.118,5.9a.4.4,0,0,1,.22-.677l4.518-.716a.4.4,0,0,0,.293-.214L7.226.218a.4.4,0,0,1,.713,0" fill="#db5c1d"/>
+                            </g>
+                        </g>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15.165" height="14.462" viewBox="0 0 15.165 14.462">
+                        <defs>
+                            <clipPath id="clip-path">
+                                <rect id="Rectangle_873" data-name="Rectangle 873" width="15.165" height="14.462" transform="translate(0 0)" fill="#db5c1d"/>
+                            </clipPath>
+                        </defs>
+                        <g id="Groupe_2479" data-name="Groupe 2479" transform="translate(0 0)">
+                            <g id="Groupe_2478" data-name="Groupe 2478" clip-path="url(#clip-path)">
+                                <path id="Tracé_1915" data-name="Tracé 1915" d="M7.939.218l2.077,4.075a.4.4,0,0,0,.294.214l4.517.716a.4.4,0,0,1,.221.677L11.814,9.135a.4.4,0,0,0-.113.345L12.416,14a.4.4,0,0,1-.576.419L7.764,12.341a.4.4,0,0,0-.363,0L3.325,14.417A.4.4,0,0,1,2.749,14L3.464,9.48a.4.4,0,0,0-.112-.345L.118,5.9a.4.4,0,0,1,.22-.677l4.518-.716a.4.4,0,0,0,.293-.214L7.226.218a.4.4,0,0,1,.713,0" fill="#db5c1d"/>
+                            </g>
+                        </g>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15.165" height="14.462" viewBox="0 0 15.165 14.462">
+                        <defs>
+                            <clipPath id="clip-path">
+                                <rect id="Rectangle_873" data-name="Rectangle 873" width="15.165" height="14.462" transform="translate(0 0)" fill="#db5c1d"/>
+                            </clipPath>
+                        </defs>
+                        <g id="Groupe_2479" data-name="Groupe 2479" transform="translate(0 0)">
+                            <g id="Groupe_2478" data-name="Groupe 2478" clip-path="url(#clip-path)">
+                                <path id="Tracé_1915" data-name="Tracé 1915" d="M7.939.218l2.077,4.075a.4.4,0,0,0,.294.214l4.517.716a.4.4,0,0,1,.221.677L11.814,9.135a.4.4,0,0,0-.113.345L12.416,14a.4.4,0,0,1-.576.419L7.764,12.341a.4.4,0,0,0-.363,0L3.325,14.417A.4.4,0,0,1,2.749,14L3.464,9.48a.4.4,0,0,0-.112-.345L.118,5.9a.4.4,0,0,1,.22-.677l4.518-.716a.4.4,0,0,0,.293-.214L7.226.218a.4.4,0,0,1,.713,0" fill="#db5c1d"/>
+                            </g>
+                        </g>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15.165" height="14.462" viewBox="0 0 15.165 14.462">
+                        <defs>
+                            <clipPath id="clip-path">
+                                <rect id="Rectangle_873" data-name="Rectangle 873" width="15.165" height="14.462" transform="translate(0 0)" fill="#db5c1d"/>
+                            </clipPath>
+                        </defs>
+                        <g id="Groupe_2479" data-name="Groupe 2479" transform="translate(0 0)">
+                            <g id="Groupe_2478" data-name="Groupe 2478" clip-path="url(#clip-path)">
+                                <path id="Tracé_1915" data-name="Tracé 1915" d="M7.939.218l2.077,4.075a.4.4,0,0,0,.294.214l4.517.716a.4.4,0,0,1,.221.677L11.814,9.135a.4.4,0,0,0-.113.345L12.416,14a.4.4,0,0,1-.576.419L7.764,12.341a.4.4,0,0,0-.363,0L3.325,14.417A.4.4,0,0,1,2.749,14L3.464,9.48a.4.4,0,0,0-.112-.345L.118,5.9a.4.4,0,0,1,.22-.677l4.518-.716a.4.4,0,0,0,.293-.214L7.226.218a.4.4,0,0,1,.713,0" fill="#db5c1d"/>
+                            </g>
+                        </g>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15.165" height="14.462" viewBox="0 0 15.165 14.462">
+                        <defs>
+                            <clipPath id="clip-path">
+                                <rect id="Rectangle_873" data-name="Rectangle 873" width="15.165" height="14.462" transform="translate(0 0)" fill="#db5c1d"/>
+                            </clipPath>
+                        </defs>
+                        <g id="Groupe_2479" data-name="Groupe 2479" transform="translate(0 0)">
+                            <g id="Groupe_2478" data-name="Groupe 2478" clip-path="url(#clip-path)">
+                                <path id="Tracé_1915" data-name="Tracé 1915" d="M7.939.218l2.077,4.075a.4.4,0,0,0,.294.214l4.517.716a.4.4,0,0,1,.221.677L11.814,9.135a.4.4,0,0,0-.113.345L12.416,14a.4.4,0,0,1-.576.419L7.764,12.341a.4.4,0,0,0-.363,0L3.325,14.417A.4.4,0,0,1,2.749,14L3.464,9.48a.4.4,0,0,0-.112-.345L.118,5.9a.4.4,0,0,1,.22-.677l4.518-.716a.4.4,0,0,0,.293-.214L7.226.218a.4.4,0,0,1,.713,0" fill="#db5c1d"/>
+                            </g>
+                        </g>
+                    </svg>
+
+                </div>
+                <p>
+                    J’ai adoré mon expérience chez Amicalement Vôtre. Je loue régulièrement des voitures de collection
+                    pour des soirées, des mariages, des tournages et des lancements de fusées.
+                </p>
+                <div class="author">
+                    <img src="{{ asset('images/elonmusk.png')}}" alt="Elon Musk">
+                    <div>
+                        <h4>Elon Musk</h4>
+                        <span>Fusée Starship 2023</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="testimonial-item" >
+            <div class="testimonial">
+                <div class="pb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15.165" height="14.462" viewBox="0 0 15.165 14.462">
+                        <defs>
+                            <clipPath id="clip-path">
+                                <rect id="Rectangle_873" data-name="Rectangle 873" width="15.165" height="14.462" transform="translate(0 0)" fill="#db5c1d"/>
+                            </clipPath>
+                        </defs>
+                        <g id="Groupe_2479" data-name="Groupe 2479" transform="translate(0 0)">
+                            <g id="Groupe_2478" data-name="Groupe 2478" clip-path="url(#clip-path)">
+                                <path id="Tracé_1915" data-name="Tracé 1915" d="M7.939.218l2.077,4.075a.4.4,0,0,0,.294.214l4.517.716a.4.4,0,0,1,.221.677L11.814,9.135a.4.4,0,0,0-.113.345L12.416,14a.4.4,0,0,1-.576.419L7.764,12.341a.4.4,0,0,0-.363,0L3.325,14.417A.4.4,0,0,1,2.749,14L3.464,9.48a.4.4,0,0,0-.112-.345L.118,5.9a.4.4,0,0,1,.22-.677l4.518-.716a.4.4,0,0,0,.293-.214L7.226.218a.4.4,0,0,1,.713,0" fill="#db5c1d"/>
+                            </g>
+                        </g>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15.165" height="14.462" viewBox="0 0 15.165 14.462">
+                        <defs>
+                            <clipPath id="clip-path">
+                                <rect id="Rectangle_873" data-name="Rectangle 873" width="15.165" height="14.462" transform="translate(0 0)" fill="#db5c1d"/>
+                            </clipPath>
+                        </defs>
+                        <g id="Groupe_2479" data-name="Groupe 2479" transform="translate(0 0)">
+                            <g id="Groupe_2478" data-name="Groupe 2478" clip-path="url(#clip-path)">
+                                <path id="Tracé_1915" data-name="Tracé 1915" d="M7.939.218l2.077,4.075a.4.4,0,0,0,.294.214l4.517.716a.4.4,0,0,1,.221.677L11.814,9.135a.4.4,0,0,0-.113.345L12.416,14a.4.4,0,0,1-.576.419L7.764,12.341a.4.4,0,0,0-.363,0L3.325,14.417A.4.4,0,0,1,2.749,14L3.464,9.48a.4.4,0,0,0-.112-.345L.118,5.9a.4.4,0,0,1,.22-.677l4.518-.716a.4.4,0,0,0,.293-.214L7.226.218a.4.4,0,0,1,.713,0" fill="#db5c1d"/>
+                            </g>
+                        </g>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15.165" height="14.462" viewBox="0 0 15.165 14.462">
+                        <defs>
+                            <clipPath id="clip-path">
+                                <rect id="Rectangle_873" data-name="Rectangle 873" width="15.165" height="14.462" transform="translate(0 0)" fill="#db5c1d"/>
+                            </clipPath>
+                        </defs>
+                        <g id="Groupe_2479" data-name="Groupe 2479" transform="translate(0 0)">
+                            <g id="Groupe_2478" data-name="Groupe 2478" clip-path="url(#clip-path)">
+                                <path id="Tracé_1915" data-name="Tracé 1915" d="M7.939.218l2.077,4.075a.4.4,0,0,0,.294.214l4.517.716a.4.4,0,0,1,.221.677L11.814,9.135a.4.4,0,0,0-.113.345L12.416,14a.4.4,0,0,1-.576.419L7.764,12.341a.4.4,0,0,0-.363,0L3.325,14.417A.4.4,0,0,1,2.749,14L3.464,9.48a.4.4,0,0,0-.112-.345L.118,5.9a.4.4,0,0,1,.22-.677l4.518-.716a.4.4,0,0,0,.293-.214L7.226.218a.4.4,0,0,1,.713,0" fill="#db5c1d"/>
+                            </g>
+                        </g>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15.165" height="14.462" viewBox="0 0 15.165 14.462">
+                        <defs>
+                            <clipPath id="clip-path">
+                                <rect id="Rectangle_873" data-name="Rectangle 873" width="15.165" height="14.462" transform="translate(0 0)" fill="#db5c1d"/>
+                            </clipPath>
+                        </defs>
+                        <g id="Groupe_2479" data-name="Groupe 2479" transform="translate(0 0)">
+                            <g id="Groupe_2478" data-name="Groupe 2478" clip-path="url(#clip-path)">
+                                <path id="Tracé_1915" data-name="Tracé 1915" d="M7.939.218l2.077,4.075a.4.4,0,0,0,.294.214l4.517.716a.4.4,0,0,1,.221.677L11.814,9.135a.4.4,0,0,0-.113.345L12.416,14a.4.4,0,0,1-.576.419L7.764,12.341a.4.4,0,0,0-.363,0L3.325,14.417A.4.4,0,0,1,2.749,14L3.464,9.48a.4.4,0,0,0-.112-.345L.118,5.9a.4.4,0,0,1,.22-.677l4.518-.716a.4.4,0,0,0,.293-.214L7.226.218a.4.4,0,0,1,.713,0" fill="#db5c1d"/>
+                            </g>
+                        </g>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15.165" height="14.462" viewBox="0 0 15.165 14.462">
+                        <defs>
+                            <clipPath id="clip-path">
+                                <rect id="Rectangle_873" data-name="Rectangle 873" width="15.165" height="14.462" transform="translate(0 0)" fill="#db5c1d"/>
+                            </clipPath>
+                        </defs>
+                        <g id="Groupe_2479" data-name="Groupe 2479" transform="translate(0 0)">
+                            <g id="Groupe_2478" data-name="Groupe 2478" clip-path="url(#clip-path)">
+                                <path id="Tracé_1915" data-name="Tracé 1915" d="M7.939.218l2.077,4.075a.4.4,0,0,0,.294.214l4.517.716a.4.4,0,0,1,.221.677L11.814,9.135a.4.4,0,0,0-.113.345L12.416,14a.4.4,0,0,1-.576.419L7.764,12.341a.4.4,0,0,0-.363,0L3.325,14.417A.4.4,0,0,1,2.749,14L3.464,9.48a.4.4,0,0,0-.112-.345L.118,5.9a.4.4,0,0,1,.22-.677l4.518-.716a.4.4,0,0,0,.293-.214L7.226.218a.4.4,0,0,1,.713,0" fill="#db5c1d"/>
+                            </g>
+                        </g>
+                    </svg>
+
+                </div>
+                <p>
+                    Merci l’équipe pour les conseils sur le choix de ma voiture. Je voulais une Renault 5 de 1972 et
+                    finalement je pars sur une Aston ! Je recommande à fond !
+                </p>
+                <div class="author">
+                    <img src="{{ asset('images/jamesbond.png')}}" alt="James Bond">
+                    <div>
+                        <h4>James Bond</h4>
+                        <span>Aston Martin DB5 1963</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="px-3 overflowx">
+  <div class="servnous">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 pe-4">
+          <h4 class="h3">Devenir membre</h4>
+          <h3 class="h2">Devenez membre du club</h3>
+          <p class="txt">Amicalement Vôtre, c’est l’hommage d’une génération aux voitures de légende. <br> <br> Ici, l’élégance rencontre la nostalgie pour offrir bien plus que des voitures : des émotions inoubliables, des souvenirs à partager et un patrimoine vivant à transmettre.</p>
+          <a class="orange-button-hover" href="{{ path('app_adhesion') }}">Découvrir le club</a>
+        </div>
+        <div class="col-md-6">
+          <img src="{{ asset('images/img6.png')}}" class="w-100" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    {% include "_partials/footer.html.twig" %}
+
+{% endblock %}

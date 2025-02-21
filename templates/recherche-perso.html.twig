@@ -1,0 +1,124 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+{% include "_partials/header.html.twig" %}
+  <section>
+    <div class="heroDiv d-flex justify-content-center align-items-center flex-column text-center">
+      <div class="container">
+        <h4>Recherche personnalisée</h4>
+        <h1>
+          Trouvez la voiture de vos rêves <br> grâce à notre recherche sur-mesure.
+        </h1>
+
+        <p class="txt text-center mt-5">
+          Chez Amicalement Vôtre, nous savons que chaque passionné a une voiture iconique en tête. Profitez de notre réseau pour la trouver.
+        </p>
+      </div>
+    </div>
+
+    <div class="d-flex justify-content-center">
+      <img src="{{ asset('images/arrow3.svg')}}" alt="Flèche" class="arrow-down">
+
+    </div>
+
+  </section>
+
+
+<section class="page-container bg-white mt-xl-5" style="height: 100%;">
+    <div class="custom-form-wrapper" style="height: auto">
+      <form class="custom-form servnous">
+
+        <div class="custom-form-field">
+          <label class="custom-form-label" for="marque">Quelle marque recherchez-vous ?</label>
+          <input class="custom-form-input" type="text" id="marque" placeholder="Porsche">
+        </div>
+        <div class="custom-form-row">
+          <div class="custom-form-field">
+            <label class="custom-form-label" for="modele">Le modèle</label>
+            <input class="custom-form-input" type="text" id="modele" placeholder="911 turbo" >
+          </div>
+          <div class="custom-form-field">
+            <label class="custom-form-label" for="annee">L'année</label>
+            <input class="custom-form-input" type="text" id="annee" placeholder="1963">
+          </div>
+        </div>
+        <div class="custom-form-row">
+          <div class="custom-form-field">
+            <label class="custom-form-label" for="nom">Nom</label>
+            <input class="custom-form-input" type="text" id="nom" placeholder="Votre nom de famille">
+          </div>
+          <div class="custom-form-field">
+            <label class="custom-form-label" for="prenom">Prénom</label>
+            <input class="custom-form-input" type="text" id="prenom" placeholder="Votre prénom">
+          </div>
+        </div>
+        <div class="custom-form-row">
+          <div class="custom-form-field">
+            <label class="custom-form-label" for="email">Email</label>
+            <input class="custom-form-input" type="email" id="email" placeholder="contact@exemple.com">
+          </div>
+          <div class="custom-form-field">
+            <label class="custom-form-label" for="telephone">Téléphone</label>
+            <input class="custom-form-input" type="tel" id="telephone" placeholder="+336 81 00 00 00">
+          </div>
+        </div>
+        <div class="custom-form-checkbox-group">
+          <input type="checkbox" id="accept">
+          <label for="accept">J'accepte de recevoir des communications d'Amicalement Vôtre</label>
+        </div>
+        <a type="submit" class="orange-button-hover" href="#">Envoyer ma demande</a>
+      </form>
+    </div>
+</section>
+
+
+<section class="Son-histoire bis" >
+  <div class="container mt-2 mb-3">
+    <div class="row no-gutters align-items-center justify-content-evenly">
+      <!-- Image à gauche -->
+      <div class="col-md-6" data-aos="fade-right"  data-aos-delay="300">
+        <div class="image-container" style="background-image: url('./images/photo-avac-interieur-voiture.png'); height: 451px; max-width:642px; width: 100%">
+        </div>
+      </div>
+      <!-- Texte à droite -->
+      <div class="col-md-4" data-aos="fade-left"  data-aos-delay="300">
+        <div class="text-container">
+          <h3 class="h3">Louer une voiture de collection</h3>
+          <h2 class="h2">Trouvons le modèle que vous avez en tête</h2>
+          <p class="txt">Celui qui fait battre vôtre coeur, mais que vous n’avez pas encore trouvé. Nous sommes à votre disposition pour vous accompagner dans cette quête, en mettant tout en oeuvre pour dénicher la perle rare. </p>
+          <p class="txt">
+            Nous mettons notre réseau exclusif et notre expertise pour vous proposer des véhicules authentiques et conformes à vos attentes.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="cards-section">
+  <div class="cards-container">
+    <!-- Card 1 -->
+    <div class="card">
+      <div class="card-image" style="background-image: url('./images/Corner-photos-interieures.png');"></div>
+      <h3 class="card-title">Louer</h3>
+    </div>
+    <!-- Card 2 -->
+    <div class="card">
+      <div class="card-image" style="background-image: url('./images/pexels-skelm-7856851.png');"></div>
+      <h3 class="card-title">Les expériences</h3>
+      <span class="card-badge">Bientôt disponible</span>
+    </div>
+    <!-- Card 3 -->
+    <div class="card">
+      <div class="card-image" style="background-image: url('./images/WhatsApp Image 2024-11-29 at 18.53.43 (2).png');"></div>
+      <h3 class="card-title">Adhérer au Club</h3>
+
+    </div>
+  </div>
+</section>
+
+
+    {% include "_partials/footer.html.twig" %}
+{% endblock %}

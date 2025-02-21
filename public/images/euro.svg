@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+  <g id="Groupe_2783" data-name="Groupe 2783" transform="translate(-1335 -1134)">
+    <g id="Ellipse_146" data-name="Ellipse 146" transform="translate(1335 1134)" fill="#fff" stroke="#db5c1d" stroke-width="2">
+      <circle cx="15" cy="15" r="15" stroke="none"/>
+      <circle cx="15" cy="15" r="14" fill="none"/>
+    </g>
+    <text id="_" data-name="€" transform="translate(1344 1155)" fill="#db5c1d" font-size="18" font-family="Nunito Sans" font-weight="500" letter-spacing="-0.01em"><tspan x="0" y="0">€</tspan></text>
+  </g>
+</svg>
