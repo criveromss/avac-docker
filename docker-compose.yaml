@@ -2,7 +2,9 @@ version: '3.8'
 
 services:
     php:
-        image: php:8.3-fpm-alpine
+        build:
+            context: .
+            dockerfile: ./docker/php/Dockerfile
         restart: unless-stopped
         volumes:
             - ./:/var/www/html
@@ -20,16 +22,18 @@ services:
             - "traefik.http.routers.${PROJECT_NAME:-symfony}.tls.certresolver=letsencrypt"
             - "traefik.http.services.${PROJECT_NAME:-symfony}.loadbalancer.server.port=9000"
     
+   
     nginx:
         build:
             context: ./nginx
             dockerfile: Dockerfile
+        volumes:
+            - ./:/var/www/html
         restart: unless-stopped
         depends_on:
             - php
         ports:
             - "8092:80"
-        
     
     database:
         image: postgres:15-alpine
