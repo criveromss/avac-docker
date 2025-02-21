@@ -21,16 +21,15 @@ services:
             - "traefik.http.services.${PROJECT_NAME:-symfony}.loadbalancer.server.port=9000"
     
     nginx:
-        image: nginx:alpine
+        build:
+            context: ./nginx
+            dockerfile: Dockerfile
         restart: unless-stopped
-        volumes:
-            - ./:/var/www/html
-            - ./nginx:/etc/nginx/conf.d
-        
-        ports:
-            - "8092:80"  # Port 8080 en local pour éviter conflit avec Coolify/Traefik
         depends_on:
             - php
+        ports:
+            - "8092:80"
+        
     
     database:
         image: postgres:15-alpine
