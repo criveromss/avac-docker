@@ -25,7 +25,13 @@ RUN chown -R www-data:www-data /var/www/html \
 # Installer Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
+# Passer à l'utilisateur www-data avant d'exécuter Composer
+USER www-data
+
 # Installer les dépendances PHP de Symfony
 RUN composer install --no-dev --optimize-autoloader
+
+# Repasser à root pour démarrer PHP-FPM
+USER root
 
 CMD ["php-fpm"]
